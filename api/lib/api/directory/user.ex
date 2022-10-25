@@ -5,6 +5,8 @@ defmodule Api.Directory.User do
   schema "users" do
     field :email, :string
     field :username, :string
+    # has_one :clock, Api.Directory.Clock
+    # has_one :workingtime, Api.Directory.Workingtime
 
     timestamps()
   end

@@ -23,7 +23,7 @@ config :api, ApiWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "iizQ3XaGg3nSSEduUChj8/1oUz9vFyE05kz7tuLmfQRtlz4ZGkGHCdG2lty1rgSj",
+  secret_key_base: "rcsCwhYC1x4hS2inOsBI5/q/TyDEjAz7HGVsoArgbItkPl+zhdQwrNw1o6xsUubg",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}

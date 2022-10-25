@@ -17,6 +17,8 @@ defmodule ApiWeb.Router do
   scope "/api", ApiWeb do
     pipe_through :api
     resources "/users", UserController, except: [:new, :edit]
+    resources "/clocks", ClockController, except: [:new, :edit]
+    resources "/workingtimes", WorkingtimeController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
