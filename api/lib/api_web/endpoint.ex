@@ -7,7 +7,7 @@ defmodule ApiWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_api_key",
-    signing_salt: "MPjmYwRI"
+    signing_salt: "/Viun1RU"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
@@ -46,5 +46,6 @@ defmodule ApiWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug CORSPlug, origins: "http://localhost:5173"
   plug ApiWeb.Router
 end

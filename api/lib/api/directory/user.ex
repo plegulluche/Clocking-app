@@ -3,10 +3,9 @@ defmodule Api.Directory.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :email, :string
-    field :username, :string
-    # has_one :clock, Api.Directory.Clock
-    # has_one :workingtime, Api.Directory.Workingtime
+    field(:email, :string)
+    field(:username, :string)
+    has_one(:clocks, Api.Directory.Clock)
 
     timestamps()
   end
@@ -16,6 +15,5 @@ defmodule Api.Directory.User do
     user
     |> cast(attrs, [:email, :username])
     |> validate_required([:email, :username])
-    |> validate_format(:email, ~r/@/)
   end
 end
