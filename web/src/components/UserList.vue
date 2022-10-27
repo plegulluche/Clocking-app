@@ -1,18 +1,10 @@
 <script lang="ts" setup>
+import { useUsers } from "../stores/Users";
 import { ref, onMounted } from "vue";
 import axios from "axios";
+const userStore = useUsers();
 let allUsers = ref([]);
-onMounted(async () => {
-  // const response = await axios.get("http://localhost:4000/api/users");
-
-  // allUsers = response.data.data;
-  // console.log(allUsers);
-  //get users from the server
-  const response = await axios.get("http://localhost:4000/api/users");
-  allUsers.value = response.data.data;
-
-  console.log(allUsers.value);
-});
+userStore.getUsers();
 </script>
 
 <template>
@@ -25,9 +17,9 @@ onMounted(async () => {
         <el-divider />
       </div>
       <div class="content">
-        <div v-for="user in allUsers" :key="user.id">
+        <div v-for="user in userStore.users" :key="user.id">
           <el-row :gutter="20">
-            <el-col :span="24">
+            <el-col :span="14">
               <el-button type="info" plain>
                 <div class="userid">
                   {{ user.id }}
@@ -40,10 +32,25 @@ onMounted(async () => {
                 </div>
               </el-button>
             </el-col>
+            <el-col :span="3">
+              <el-button
+                type="danger"
+                plain
+                @click="userStore.deleteUser(user.id)"
+              >
+                <el-icon name="el-icon-delete"></el-icon>
+              </el-button>
+            </el-col>
+            <el-col :span="3">
+              <el-button
+                type="primary"
+                plain
+                @click="userStore.updateUser(user.id)"
+              ></el-button>
+            </el-col>
           </el-row>
-        </div>
-      </div></el-card
-    >
+        </div></div
+    ></el-card>
   </div>
 </template>
 
