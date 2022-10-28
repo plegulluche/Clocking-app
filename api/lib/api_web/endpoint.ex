@@ -46,6 +46,6 @@ defmodule ApiWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug CORSPlug, origins: "http://172.31.38.29:5173"
+  plug CORSPlug, origins: "http://localhost:5173"
   plug ApiWeb.Router
 end
