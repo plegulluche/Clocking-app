@@ -1,0 +1,42 @@
+# Version of docker-compose.
+version: '3'
+
+# Containers we're going to run.
+services:
+    vue-ui:
+      build:
+        context: ./web
+      ports:
+        - "8080:8080"
+      container_name: vue-ui
+      volumes:
+        - ./my-app:/usr/src/app/my-app
+        - /usr/src/app/my-app/node_modules
+    phoenix:
+      build: ./api
+      volumes:
+        - .:/app
+      ports:
+        - "4000:4000"
+      environment:
+        PGUSER: postgres
+        PGPASSWORD: postgres
+        PGDATABASE: myapp_dev
+        PGHOST: db
+        PGPORT: 5432
+      depends_on:
+        - db
+      command:
+        - "./entrypoint.sh"
+    db:
+      image: postgres:14-alpine
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        PGDATA: /var/lib/postgresql/data/pgdata
+      restart: always
+      volumes:
+        - ./_pgdata:/var/lib/postgresql/data
+
+volumes:
+   pgdata:
