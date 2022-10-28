@@ -120,7 +120,7 @@ const createForm = () => {
   } else {
     axios({
       method: "post",
-      url: "http://localhost:4000/api/users",
+      url: "http://172.31.38.29:4000/api/users",
       data: {
         user: {
           username: newuser.name,
@@ -145,7 +145,7 @@ const modForm = () => {
   } else {
     axios({
       method: "put",
-      url: `http://localhost:4000/api/users/${moduser.id}`,
+      url: `http://172.31.38.29:4000/api/users/${moduser.id}`,
       data: {
         user: {
           username: moduser.name,
@@ -169,7 +169,7 @@ const deleteForm = () => {
   } else {
     axios({
       method: "delete",
-      url: `http://localhost:4000/api/users/${deleteeuser.id}`,
+      url: `http://172.31.38.29:4000/api/users/${deleteeuser.id}`,
     });
     ElMessage({
       message: `${deleteeuser.id} deleted`,

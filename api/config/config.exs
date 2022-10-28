@@ -12,7 +12,7 @@ config :api,
 
 # Configures the endpoint
 config :api, ApiWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "172.31.38.29"],
   render_errors: [view: ApiWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Api.PubSub,
   live_view: [signing_salt: "2zZ0CTZ7"]
