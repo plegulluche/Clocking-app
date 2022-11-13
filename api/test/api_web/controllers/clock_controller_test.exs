@@ -1,17 +1,17 @@
 defmodule ApiWeb.ClockControllerTest do
   use ApiWeb.ConnCase
 
-  import Api.DirectoryFixtures
+  import Api.TimerFixtures
 
-  alias Api.Directory.Clock
+  alias Api.Timer.Clock
 
   @create_attrs %{
     status: true,
-    time: ~N[2022-10-24 14:32:00]
+    time: ~U[2022-11-02 15:53:00Z]
   }
   @update_attrs %{
     status: false,
-    time: ~N[2022-10-25 14:32:00]
+    time: ~U[2022-11-03 15:53:00Z]
   }
   @invalid_attrs %{status: nil, time: nil}
 
@@ -36,7 +36,7 @@ defmodule ApiWeb.ClockControllerTest do
       assert %{
                "id" => ^id,
                "status" => true,
-               "time" => "2022-10-24T14:32:00"
+               "time" => "2022-11-02T15:53:00Z"
              } = json_response(conn, 200)["data"]
     end
 
@@ -58,7 +58,7 @@ defmodule ApiWeb.ClockControllerTest do
       assert %{
                "id" => ^id,
                "status" => false,
-               "time" => "2022-10-25T14:32:00"
+               "time" => "2022-11-03T15:53:00Z"
              } = json_response(conn, 200)["data"]
     end
 

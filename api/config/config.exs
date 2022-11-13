@@ -26,6 +26,11 @@ config :api, ApiWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :api, Api.Mailer, adapter: Swoosh.Adapters.Local
 
+# Configure Guardian
+# config :api, Api.Account.Guardian,
+#   issuer: "api",
+#   secret_key: "Jcx3BnOVs6dacG8EXquXoHChWnXT5ZYZpD1FAyLfswoi1HOEkB+j5w4OIqD2ieTL"
+
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
 

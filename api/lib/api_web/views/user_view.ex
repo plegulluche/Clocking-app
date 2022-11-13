@@ -13,8 +13,13 @@ defmodule ApiWeb.UserView do
   def render("user.json", %{user: user}) do
     %{
       id: user.id,
+      username: user.username,
       email: user.email,
-      username: user.username
+      password: user.password,
+      role: user.role
     }
   end
+
+  def render("error.json", %{success: success, message: message}),
+    do: %{success: success, message: message}
 end

@@ -9,3 +9,14 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Api.Account
+
+general_manager = %{
+  "email" => "general_manager@e.fr",
+  "password" => "super_secret",
+  "role" => "general_manager",
+  "username" => "General Manager"
+}
+
+Account.create_user(general_manager)

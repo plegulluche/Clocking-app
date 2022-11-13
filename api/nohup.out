@@ -1,0 +1,45 @@
+The disableGPU setting is set to undefined
+Not disabling GPU
+
+(postman:6270): Gtk-WARNING **: 19:20:01.050: Failed to parse /etc/xdg/gtk-3.0/settings.ini: Permission denied
+ProtocolHandler~setDefaultProtocolClient: Command failed: xdg-mime default Postman.desktop x-scheme-handler/postman
+/bin/sh: 1: xdg-mime: not found
+
+[6422:1113/192001.701498:ERROR:angle_platform_impl.cc(44)] Display.cpp:878 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+[6422:1113/192001.703031:ERROR:gl_surface_egl.cc(780)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+[6422:1113/192001.703198:ERROR:gl_surface_egl.cc(1375)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+[6422:1113/192001.703576:ERROR:angle_platform_impl.cc(44)] Display.cpp:878 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+[6422:1113/192001.703763:ERROR:gl_surface_egl.cc(780)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+[6422:1113/192001.703929:ERROR:gl_surface_egl.cc(1375)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+[6422:1113/192001.704096:ERROR:gl_initializer_linux_x11.cc(178)] GLSurfaceEGL::InitializeOneOff failed.
+[6422:1113/192001.738655:ERROR:viz_main_impl.cc(161)] Exiting GPU process due to errors during initialization
+Error org.freedesktop.DBus.Error.Failed: cannot find desktop file "/var/lib/snapd/desktop/applications/postman_Postman.desktop"
+Main~createDefaultWorkingDir - Default working dir creation already attempted
+1668367201865 main info "Booting Postman 9.31.0, linux-5.19.0-kali2-amd64 on x64"
+1668367201867 main info "EventBus~initialize - Success"
+[6449:1113/192001.868057:ERROR:gpu_init.cc(453)] Passthrough is not supported, GL is swiftshader, ANGLE is 
+1668367201872 main info "Proxy configuration has not been setup"
+1668367201873 main info "CloudProxyManager~init - Success"
+1668367201886 main info "UpdateHandler~init - Success"
+1668367201890 main info "LeaderSelection: Initialized successfully"
+1668367201892 main info "VersionDependencyService: Initialized successfully"
+1668367201918 main info "LinuxAutoUpdater~Cleanup - Initial cleanup successful"
+1668367201943 main info "GPU detected VID 0 DID 0 ACTIVE false"
+1668367205881 main info "RuntimeIPCAgent~started: Success"
+INTERCEPTOR CONNECTIVITY: Connecting to Interceptor Bridge
+InterceptorBridge: Trying to connect Native App IPC~Interceptor Bridge
+IPCClient ~ WindowHandler: New event is received { type: 'window-opened' }
+1668367208081 main info "windowManager: First requester booted successfully."
+1668367208081 main info "windowManager~restoreWindows: Restoring requester windows"
+1668367208082 main info "Main~AppEvents - Received booted event for process requester.Version 9.31.23 UI Version: 9.31.23-ui-221108-1820 Desktop Platform Version: 9.31.0"
+1668367208100 main info "performBackgroundShellMigration: Migration has already been done. Bailing out"
+1668367209479 main info "Main - model-events~user - (user, bootstrapUser) received"
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }
+IPCClient ~ WindowHandler: New event is received { type: 'leave-full-screen', windowId: 1 }

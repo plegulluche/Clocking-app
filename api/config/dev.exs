@@ -7,6 +7,10 @@ config :api, Api.Repo,
   database: System.get_env("PGDATABASE"),
   hostname: System.get_env("PGHOST"),
   port: String.to_integer(System.get_env("PGPORT")),
+  # username: "postgres",
+  # password: "postgres",
+  # hostname: "localhost",
+  # database: "myapp_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -28,7 +32,7 @@ config :api, ApiWeb.Endpoint,
   secret_key_base: "hC/lXARiisM9Jij9DuM/tek7dVoCo25PrL+mwscjw5lr21kfNGV6cBZvNaTnIwyU",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    # esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
   ]
 
 # ## SSL Support
