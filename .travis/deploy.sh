@@ -15,7 +15,7 @@ set -e
 
 # sudo apt install sshpass
 
-sshpass -p 'yeM7Uz7G7FjZ' ssh debian@176.31.162.57 'cd /home/debian/webinterfaces;git pull;docker-compose down --volumes;docker-compose up -d --build;exit'
+
 # pwd
 # cd /home/webinterfaces
 # git pull
